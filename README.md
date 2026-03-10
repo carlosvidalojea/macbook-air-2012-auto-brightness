@@ -3,6 +3,8 @@ Auto-brightness Lightweight script for Linux Mint that activates the ambient lig
 
 Auto-brightness script specifically calibrated for the **MacBook Air 5,2 (Mid-2012)** running Linux Mint or Ubuntu-based distributions.
 
+Tested on MacBook Air 5,2 (Mid-2012) running Linux Mint 22.
+
 ## Key Features
 - **Cinematic Fade:** Smooth, frame-by-frame brightness transitions (no sudden jumps).
 - **Ambient Light Sensor (ALS) Integration:** Uses the native MacBook sensor via `iio-sensor-proxy`.
