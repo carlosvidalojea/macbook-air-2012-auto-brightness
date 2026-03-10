@@ -35,6 +35,7 @@ chmod +x ~/.local/bin/auto_brightness.sh
 ```
 ### 4. Run at Startup
 Add the script to your Startup Applications:
+
 Name: MacBook Auto Brightness
-Command: /bin/bash /home/YOUR_USER/.local/bin/auto_brightness.sh
+Command: ```/bin/bash /home/YOUR_USER/.local/bin/auto_brightness.sh```
 Delay: 30 seconds (recommended)
