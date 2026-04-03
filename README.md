@@ -91,6 +91,7 @@ sudo visudo -c -f /etc/sudoers.d/kbd-backlight
 Add the script to your Startup Applications:
 
 - **Name:** `MacBook Auto Brightness`
-- **Command:** `/bin/bash /home/YOUR_USER/.local/bin/auto_brightness.sh` 
-or `/bin/bash /home/YOUR_USER/.local/bin/auto_brightness_v2.sh`
+- **Command:**
+- `/bin/bash /home/YOUR_USER/.local/bin/auto_brightness.sh`
+- or `/bin/bash /home/YOUR_USER/.local/bin/auto_brightness_v2.sh`
 - **Delay:** 30 seconds (recommended)
