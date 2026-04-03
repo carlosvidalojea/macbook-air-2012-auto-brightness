@@ -57,9 +57,9 @@ To allow the script to control keyboard backlight without root privileges, creat
 sudo visudo -f /etc/sudoers.d/kbd-backlight
 ```
 Add this line (replace `your_user` with your username):
-
-`your_user ALL=(ALL) NOPASSWD: /usr/bin/tee "/sys/class/leds/smc::kbd_backlight/brightness"`
-
+```bash
+your_user ALL=(ALL) NOPASSWD: /usr/bin/tee "/sys/class/leds/smc::kbd_backlight/brightness"
+```
 Verify the rule is valid:
 ```bash
 sudo visudo -c -f /etc/sudoers.d/kbd-backlight
