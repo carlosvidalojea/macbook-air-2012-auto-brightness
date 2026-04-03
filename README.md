@@ -71,7 +71,7 @@ or
 chmod +x ~/.local/bin/auto_brightness_v2.sh
 ```
 - `auto_brightness.sh` — display brightness only
-- `auto_brightness_v2.sh` — display + keyboard backlight (requires sudoers rule from step 4)
+- `auto_brightness_v2.sh` — display + keyboard backlight (requires sudoers rule, see step 4 below)
 
 ### 4. Set Keyboard Backlight Permissions (only for `auto_brightness_v2.sh`)
 To allow the script to control keyboard backlight without root privileges, create a sudoers rule:
