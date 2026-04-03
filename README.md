@@ -66,7 +66,7 @@ sudo visudo -c -f /etc/sudoers.d/kbd-backlight
 ```
 
 ### 4. Setup the Script
-Create the directory and save the `auto_brightness.sh` file into that folder:
+Create the directory and save the `auto_brightness.sh` (only screen auto-brightness script) or `auto_brightness_v2.sh` (screen and keyboard Backlight script) file into that folder:
 ```bash
 mkdir -p ~/.local/bin
 mv ~/auto_brightness.sh ~/.local/bin/
