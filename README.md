@@ -51,7 +51,29 @@ echo 'ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="acpi_video0", RUN+="/bin/c
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-### 3. Set Keyboard Backlight Permissions
+### 3. Setup the Script
+Create the directory and save the `auto_brightness.sh` (only screen auto-brightness script) or `auto_brightness_v2.sh` (screen and keyboard Backlight script) file into that folder:
+```bash
+mkdir -p ~/.local/bin
+mv ~/auto_brightness.sh ~/.local/bin/
+```
+or
+```bash
+mkdir -p ~/.local/bin
+mv ~/auto_brightness_v2.sh ~/.local/bin/
+```
+Make it executable:
+```bash
+chmod +x ~/.local/bin/auto_brightness.sh
+```
+or
+```bash
+chmod +x ~/.local/bin/auto_brightness_v2.sh
+```
+- `auto_brightness.sh` — display brightness only
+- `auto_brightness_v2.sh` — display + keyboard backlight (requires sudoers rule from step 4)
+
+### 4. Set Keyboard Backlight Permissions (only for `auto_brightness_v2.sh`)
 To allow the script to control keyboard backlight without root privileges, create a sudoers rule:
 ```bash
 sudo visudo -f /etc/sudoers.d/kbd-backlight
@@ -63,17 +85,6 @@ your_user ALL=(ALL) NOPASSWD: /usr/bin/tee "/sys/class/leds/smc::kbd_backlight/b
 Verify the rule is valid:
 ```bash
 sudo visudo -c -f /etc/sudoers.d/kbd-backlight
-```
-
-### 4. Setup the Script
-Create the directory and save the `auto_brightness.sh` (only screen auto-brightness script) or `auto_brightness_v2.sh` (screen and keyboard Backlight script) file into that folder:
-```bash
-mkdir -p ~/.local/bin
-mv ~/auto_brightness.sh ~/.local/bin/
-```
-Make it executable:
-```bash
-chmod +x ~/.local/bin/auto_brightness.sh
 ```
 
 ### 5. Run at Startup
